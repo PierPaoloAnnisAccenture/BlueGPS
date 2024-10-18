@@ -1,5 +1,11 @@
 # cordova-outsystems-bluegps
 
+{
+    "plugin" :{
+        "url": "https://github.com/PierPaoloAnnisAccenture/BlueGPS"
+    }
+}
+
 detail about version
 https://success.outsystems.com/Support/Release_Notes/Mobile_Apps_Build_Service_Versions
 

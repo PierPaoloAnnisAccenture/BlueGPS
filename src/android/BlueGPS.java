@@ -609,10 +609,12 @@ public class BlueGPS extends CordovaPlugin {
             }
 
 
-            if (configurationJSON.has("toolbox")) {
-                //TODO
-                //configurationMap.setToolbox();
-            }
+            //disabled toolbox
+            ToolboxMapParameter toolbaxMapParameter = new ToolboxMapParameter();
+            toolbaxMapParameter.setEnabled(false);
+            configurationMap.setToolbox(new ToolboxMap(toolbaxMapParameter,toolbaxMapParameter));
+
+           
 
             if (configurationJSON.has("visualization")) {
                 //TODO

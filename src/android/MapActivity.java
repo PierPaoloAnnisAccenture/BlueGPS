@@ -303,14 +303,13 @@ private void setListenerOnMapView() {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.settings:
+        if (item.getItemId()==R.id.settings){
                 showToolbarView();
                 return true;
-            default:
+            }
                 return super.onOptionsItemSelected(item);
-        }
     }
+    
 
     private void tapViewClickListener() {
         binding.tapView.setOnClickListener(view -> {

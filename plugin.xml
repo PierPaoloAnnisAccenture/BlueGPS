@@ -92,7 +92,11 @@
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
 			<string>This app needs access to the location services.</string>
 		</config-file>
-        
+		
+        <config-file overwrite="true" parent="NSLocationWhenInUsageDescription" platform="ios" target="*-Info.plist">
+			<string>This app needs access to the location services.</string>
+
+		</config-file>
 
         <framework src="sdk/ios/SynapsesSDK.xcframework" custom="true" embed="true"/>
 		<!--source-file src="sdk/ios/SynapsesSDK.xcframework" target-dir="lib" framework="true"/-->

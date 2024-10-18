@@ -176,6 +176,10 @@ import SynapsesSDK
             BlueGPSPlugin.mapConfig.show.desk = showConfig!["desk"] as! Bool
         }
         
+	//not show button in the map
+        BlueGPSPlugin.mapConfig.toolbox.mapControl.enabled = false
+        BlueGPSPlugin.mapConfig.toolbox.layer.enabled = false
+
         mapView = MapViewController()
         if #available(iOS 13, *){}
         viewController.present(mapView!, animated: true, completion: nil)
@@ -303,7 +307,10 @@ import SynapsesSDK
                         BlueGPSPlugin.mapConfig.style.navigation.velocityOptions = velocityOptions
                     }
                 }
-                
+                //not show button in the map
+      		BlueGPSPlugin.mapConfig.toolbox.mapControl.enabled = false
+        	BlueGPSPlugin.mapConfig.toolbox.layer.enabled = false
+
                 let sourceMapId: Int? = originPoint?["mapId"] as? Int
                 let sourceX: Double? = originPoint?["x"] as? Double
                 let sourceY: Double? = originPoint?["y"] as? Double
@@ -315,6 +322,8 @@ import SynapsesSDK
                 let sourceModel = MapPositionModel(mapId: sourceMapId ?? 0, tagid: tagid, roomId: nil, areaId: nil, x: sourceX ?? 0.0, y: sourceY ?? 0.0, data: nil)
                 let destModel = MapPositionModel(mapId: destMapId ?? 0, tagid: tagid, roomId: nil, areaId: nil, x: destX ?? 0.0, y: destY ?? 0.0, data: nil)
                 
+
+
                 mapView = MapViewController()
                 
                 mapView?.webConsole = commandDelegate

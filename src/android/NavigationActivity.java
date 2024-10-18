@@ -128,7 +128,7 @@ public class NavigationActivity extends AppCompatActivity {
 
 
 
-                    NavigationAdapter adapter = new NavigationAdapter(NavigationActivity.this, R.layout.item_spinner, R.id.tvName, list);
+                    NavigationAdapter adapter = new NavigationAdapter(NavigationActivity.this, android.R.layout.simple_spinner_item,android.R.id.text1, list);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                     originSpinner.setAdapter(adapter);
